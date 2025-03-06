@@ -1,6 +1,6 @@
 # ✈️ AeroChat - AI Airline Assistant
 
-![AeroChat Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSMlmz-Nzw_2oFGlRjvgL-AQ7klh7DIz92AyMqpzCSC0MUEfSpsn5Q7HmOzvX9jos_Jg&usqp=CAU)
+![AeroChat Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDrJRnSkpfR4-K7Vk8wq3aHBupJvjLwjDbg&s)
 
 **AeroChat** is an AI-powered airline customer service chatbot that provides real-time flight status updates, weather information, and assistance with airline policies. Built with **Streamlit** and integrated with **OpenAI, AviationStack, and OpenWeather APIs**, it offers a seamless user experience for travelers. 🚀
 
