@@ -5,9 +5,12 @@ import re
 from datetime import datetime, timedelta
 
 # Set up your API keys here
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 aviationstack_api_key = st.secrets["AVIATIONSTACK_API_KEY"]
 openweather_api_key = st.secrets["OPENWEATHER_API_KEY"]
+
+# Initialize OpenAI Client
+client = openai.OpenAI(api_key=openai_api_key)
 
 # Initialize session state to keep track of conversation history
 if "messages" not in st.session_state:
@@ -330,12 +333,11 @@ def extract_destination_from_flight_info(flight_info_text):
 # Function to get chatbot response from OpenAI
 def get_chatbot_response(messages):
     try:
-        client = openai.OpenAI()
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=messages
         )
-        return response.choices[0].message['content'].strip()
+        return response.choices[0].message.content
     except Exception as e:
         return f"Error: {str(e)}"
 
