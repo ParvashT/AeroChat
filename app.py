@@ -330,6 +330,7 @@ def extract_destination_from_flight_info(flight_info_text):
 # Function to get chatbot response from OpenAI
 def get_chatbot_response(messages):
     try:
+        client = openai.OpenAI()
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages
