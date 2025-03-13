@@ -419,12 +419,12 @@ def submit_input():
     st.session_state.user_input = ""
 
 # Streamlit app setup
-st.title("Airline Customer Service Chatbot")
-st.write("Ask about flight status, flight availability, booking assistance, baggage policies, cancellation policies, frequent flyer program, weather information, or other airline services!")
+st.title("AeroChat - Your AI Airline Assistant ✈️")
+st.write("Welcome to **AeroChat**, your AI-powered airline assistant! Get real-time flight updates, weather forecasts, baggage policies, and more—all in one place. ✈️")
 
 # Personalized greeting for first-time users
 if not st.session_state.greeted:
-    greeting_message = "Hello! Welcome to our airline chatbot service 😊. How can I assist you today?"
+    greeting_message = "Hello! Welcome to **AeroChat** ✈️. How can I assist you today?"
     st.session_state.messages.append({"role": "assistant", "content": greeting_message})
     st.session_state.greeted = True
     st.write("Chatbot:", greeting_message)
